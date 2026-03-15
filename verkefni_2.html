@@ -47,13 +47,57 @@
 										<h2>Verkefni 2</h2>
 										<h4> <em>Parametrísk hönnun og tölvustuddur skurður</em></h4>
 									</header>
-									<span class="image main"><img src="images/inprogress.jpg" alt=""></span>
+									<span class="image main"><img src="images/kaffi_kassi.jpg" alt=""></span>
+									<div class="col-6 col-12-small">
+										<ul class="actions stacked">
+											<li><a href="#" class="button fit">Hönnunarskjöl</a></li>
+										</ul>
+									</div>
 									<h4>Verkefnalýsing</h4>
 									<p>Helsta markmið verkefnisins er að nota vínylskera til að framleiða hlut innan 100 × 50 cm skurðarflatar og jafnframt hanna parametrískt, geirneglt módel. Áhersla er lögð á að módelið sé skalanlegt og byggt á góðum parametrum sem gera kleift að aðlaga meðal annars efnisþykkt, hæð og breidd. </p>
 									<h4>Hönnun og val</h4>
-									<p>Hugmyndin að verkefninu kom </p>
+									<p>Upprunalega ætlaði ég að hanna eitthvað mjög flókið fyrir þetta verkefni, en ég hafði í raun enga skýra hugmynd um hvað það ætti að vera. Fyrsta hugmyndin mín var að gera vínrekka og ég var byrjuð að teikna hann í Fusion þegar í ljós kom að glæri 5 mm akrýlinn var búinn 😢. Ég taldi ólíklegt að vínrekkinn myndi halda flöskunum nægilega vel ef hann yrði gerður úr 3 mm glæru akrýli og því ákvað ég að hætta við þá hugmynd. </p>
+									<p>Eftir stutt spjall við samnemanda minn, Aaron Asug Rosento, fékk ég þá sniðugu hugmynd að leita að flottum vörum á <a href="https://www.temu.com/is-en?_x_vst_scene=adg&_x_ads_channel=google&_x_ads_sub_channel=search&_x_ads_account=5961676174&_x_ads_set=21916969616&_x_ads_id=167458831101&_x_ads_creative_id=721683454248&_x_ns_source=g&_x_ns_gclid=Cj0KCQjwsdnNBhC4ARIsAA_3heihL89y2tpWlkppQ-0-rvgYpDB8QXBsqdomUCoMprci7zXuVJE2wqgaAtmKEALw_wcB&_x_ns_placement=&_x_ns_match_type=e&_x_ns_ad_position=&_x_ns_product_id=&_x_ns_target=&_x_ns_devicemodel=&_x_ns_wbraid=CkAKCAjwjtTNBhBYEjAA_ep-tGrDtayaIAu8rlWE_gOowVKXJ81tfsr6auoHNjwAGb0ztD8WG56CviagX8saAh-x&_x_ns_gbraid=0AAAAAo4mICGl6PgH6PPB4_5-E_VctUa1O&_x_ns_keyword=temu&_x_ns_targetid=kwd-4583699489&_x_ns_extensionid=&refer_page_name=kuiper&refer_page_id=15498_1773617704814_w43lzlif5q&refer_page_sn=15498&_x_sessn_id=1dujpgxxtk&is_back=1" > TEMU</a> og endurgera eina þeirra. Ég hóf leitina þar og fann mjög flottan kaffihylkjakassa. Þar sem við fjölskyldan drekkum mikið kaffi og kaffihylkin hafa tilhneigingu til að enda út um allt fannst mér þetta vera bæði nytsamleg og sniðug lausn, þó hönnunin væri kannski ekki mjög flókin.</p>
+							
 									<h4>Kerf próf</h4>
+									<p>KERF er mæling á því hversu mikið aukaefni laserskerinn fjarlægir þegar hann sker. </p>
+									<div class="box alt">
+														<div class="row gtr-50 gtr-uniform">
+															<div class="col-4"><span class="image fit"><img src="images/laser_cut.png" alt="" /></span></div>
+														</div>
+													</div>
+									<p>Það má líkja þessu við að teikna eftir línu með þykkum penna. Jafnvel þótt reynt sé að fylgja línunni fullkomlega verður strokið alltaf aðeins breiðara en línan sjálf. Laserskerinn virkar á svipaðan hátt þ.e. hann sker ekki einungis nákvæmlega á mörkunum heldur eyðir einnig smá efni í kringum skurðinn. Þetta verður til þess að skurðurinn verður alltaf aðeins breiðari en upphaflega var gert ráð fyrir. </p>
+									<p>Til þess að hlutur sem er skorinn út verði í réttri stærð þarf því að þekkja þetta frávik og taka tillit til þess í hönnuninni. Til að áætla þessa auka breidd var framkvæmt svokallað KERF-próf, þar sem mælt var hversu mikið efni laserskerinn fjarlægði umfram hina skilgreindu skurðlínu. Skornir voru út níu ferningar á 3 mm glæran akrýl sem voru allir að stærð 20x40 mm. Hér fyrir neðan má sjá mynd af þessu. </p>
+									<div class="box alt">
+														<div class="row gtr-50 gtr-uniform">
+															<div class="col-4"><span class="image fit"><img src="images/kerf5.jpg" alt="" /></span></div>
+															<div class="col-4"><span class="image fit"><img src="images/kerf4.jpg" alt="" /></span></div>
+														</div>
+													</div>
+									<p>Við reiknuðum frávikið með því að nota þessa jöfnu hér: </p>
+									<div class="box">
+									<p class="align-center">KERF = (lengd skurðar - lengd ferninga) / fjöldi skurða</p>
+									</div>
+									<p>Lengd skurðarins mældist um 134,6 mm og samanlögð lengd ferninganna um 133,0 mm. Fjöldi skurða var 10. Samkvæmt jöfnunni hér að ofan fékkst því að frávikið væri: </p>
+									<div class="box">
+									<p class="align-center">KERF = (134,6 mm - 133 mm) / 10 = 0,16 mm</p>
+									</div>
+									Hér fyrir neðan má sjá myndir af því þegar verið var að mæla. 
 									<p></p>
+									<div class="box alt">
+														<div class="row gtr-50 gtr-uniform">
+															<div class="col-4"><span class="image fit"><img src="images/kerf2.jpg" alt="" /></span></div>
+															<div class="col-4"><span class="image fit"><img src="images/kerf3.jpg" alt="" /></span></div>
+														</div>
+													</div>
+									<p>Til að kanna hvort KERF-mælingarnar hefðu verið nægilega nákvæmar var skorinn út einfaldur press-fit hlutur til að prófa hversu þétt hlutarnir pössuðu saman. Þetta próf gekk þó frekar brösulega þar sem ég þurfti að endurtaka það fimm sinnum áður en hlutirnir pössuðu rétt saman. </p>
+									<p>Fyrst stillti ég KERF-gildið á 0,16 mm en þá voru festingarnar alltof lausar og hlutirnir héldust ekki saman. Næst prófaði ég 0,17 mm en útkoman var svipuð og þeir voru enn of lausir. Ég ákvað því að hækka gildið í 0,18 mm. Þá fóru hlutirnir að passa saman en tengingin var þó enn frekar laus. </p>
+
+									<p>Eftir þetta spurði ég Magnús hvort eðlilegt væri að þurfa að endurtaka prófið svona oft og vera komin svona langt frá upphaflegu KERF-mælingunni. Hann benti mér á að skoða teikninguna betur, þar sem mögulega gæti eitthvað í festingunum hafa verið rangt teiknað. Ég fór því vandlega yfir teikninguna en sá ekkert sem benti til villu eða óeðlilegrar lögunar. </p>
+
+									<p>Í framhaldinu ákvað ég að prófa að hækka KERF-gildið meira og stillti það á 0,20 mm. Þá reyndust festingarnar hins vegar alltof þéttar og hlutirnir tengdust varla. Að lokum var því aðeins einn möguleiki eftir, sem var að prófa 0,19 mm. Það reyndist vera rétt stilling og þá pössuðu hlutirnir fullkomlega saman. </p>
+									<span class="image fit"><img src="images/test_kerf.jpg" alt="" /></span>
+									<p>Möguleg skýring á því að þurft hafi að færa gildið svona langt frá upphaflegu KERF-mælingunni er sú að í press-fit prófinu var notað annað efni, nánar tiltekið 3 mm svart glansakrýl, en í sjálfu KERF-prófinu var notað glært akrýl. Efnismunur getur haft áhrif á hvernig laserskurðurinn hagar sér og þar með á raunverulegt KERF-gildi.</p>
 									<h4>Geislaskurður</h4>
 									<p></p>
 									<h4>Vínylskurður</h4>
